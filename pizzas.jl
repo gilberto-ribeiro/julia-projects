@@ -17,7 +17,7 @@ name(pizza) = pizza[1]
 portion(pizza) = pizza[2]
 price(pizza) = pizza[3]
 
-# Table
+# Tables
 
 function print_table(pizzas)
     print("| ")
@@ -37,4 +37,13 @@ function print_table(pizzas)
         " |"
         )
     end
+end
+
+function table_to_csv(file_name, pizzas)
+    io = open(file_name, "w")
+    println(io, "name,size,price")
+    for pizza in pizzas
+        println(io, join(pizza, ','))
+    end
+    close(io)
 end
