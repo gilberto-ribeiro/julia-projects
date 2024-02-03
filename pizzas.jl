@@ -47,3 +47,16 @@ function table_to_csv(file_name, pizzas)
     end
     close(io)
 end
+
+#function read_csv(file_name)
+#    io = open(file_name, "r")
+#    columns = split(readline(io), ',')
+#    data = []
+#    while ! eof(io)
+#        line = readline(io)
+#        tuple = split(line, ',')
+#        named_tuple = [(Symbol(column) = item) for (column, item) in zip(columns, tuple)]
+#        push!(data, named_tuple)
+#    end
+#    data
+#end
